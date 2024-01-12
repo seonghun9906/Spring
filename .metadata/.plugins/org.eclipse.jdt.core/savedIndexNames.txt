@@ -38,7 +38,6 @@ INDEX VERSION 1.134+C:\development\spring boot\.metadata\.plugins\org.eclipse.jd
 88323971.index
 739102798.index
 3027321426.index
-3078549918.index
 3529594798.index
 953015143.index
 3270026918.index
