@@ -4,6 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 // @Controller : 해당 클래스를 컨트롤러 클래스로 스프링빈에 등록
 // 스프링빈 : 스프링이 관리해주는 자바 객체
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+
+
 @Controller //Controller 로 만드는것 , 어노테이션
 public class HomeController {
 	// / 주소에 대해 get 요청이 front 로 부터 오면 아래 메서드가 실행
@@ -23,4 +27,39 @@ public class HomeController {
 		return "hi";
 	}
 
+	// /param1 주소를 처리하기 위한 메서드
+	@GetMapping("/param1")
+	// p1이라는 이름으로 전달된 파라미터를 받아서 String p1에 담는다.
+	// p1이라는 이름은 index 의 p1과 가지면 좋음.
+	public String param1(@RequestParam("p1") String p1) {
+		System.out.println("p1"+p1);
+		return "index";
+	}
+	
+	@GetMapping("/param2")
+	public String param2(@RequestParam("p1") String p1,
+			@RequestParam("p2") String p2){
+		System.out.println("p1 = " + p1);
+		System.out.println("p2 = " + p2);
+		return "index";
+	}
+	// form1 주소요청에 form1.html 출력
+	@GetMapping("/form1")
+		public String form1() {
+			return "form1";
+		}
+	//getMapping 은 파일 자체를 브라우져에 띄우는 역할이여서 파일명이랑 return 명을 같게 해야함.
+	
+	@PostMapping("/form1-param")
+		public String form1Param(@RequestParam("p1") String p1,
+								@RequestParam("p2") String p2) {
+		System.out.println("p1 = " + p1);
+		System.out.println("p2 = " + p2);
+		return "index";
+		
+	}
+	
+	
+	
+	
 }

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<h2>Hello SpringBoot!!</h2>
-	<!--  hi �ּҸ� ��û�ϱ� ���� ��ũ -->
-	<a href ="/hi">hi �ּҿ�û</a>
+	<!--  hi 주소를 요청하기 위한 링크 -->
+	<a href ="/hi">hi 주소요청</a>
+	<!-- 주소요청 & 파라미터 보내기 -->
+	<!-- 주소이름: /param1 
+		보낼 파라미터 : p1='aa'-->
+	<a href="param1?p1=aa">param1 주소요청</a>
+	<a href="param2?p1=aa&p2=안녕">param2 주소요청</a>
+	
+	<a href="/form1">form1페이지 이동</a>
 </body>
 </html>
