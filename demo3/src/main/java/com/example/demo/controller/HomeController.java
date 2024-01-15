@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -71,7 +74,7 @@ public class HomeController {
 	public String model1(Model model) {
 		String str1 = "오늘은 금요일";
 		// addAttribute : 화면에 가져갈 데이터를 담음
-		model.addAttribute("s1",str1);
+		model.addAttribute("s1", str1);
 		return "model1";
 	}
 	
@@ -109,8 +112,20 @@ public class HomeController {
 		model.addAttribute("demo",demoDTO);
 		return "model3";
 	}
+	/*DTO를 쓰려면 무조건 setter가 있어야함 */
 
-		
+	@GetMapping("/method4")
+	public String model4(Model model) {
+		List<DemoDTO> list = new ArrayList<>();
+		for(int i=1; i<=10; i++) {
+			DemoDTO demoDTO = new DemoDTO();
+			demoDTO.setName("name"+i);
+			demoDTO.setAge(i);
+			list.add(demoDTO);
+		}
+		model.addAttribute("list", list);
+		return "model4";
+	}
 	
 }
 
