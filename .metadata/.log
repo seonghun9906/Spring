@@ -1302,3 +1302,9 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-15 09:52:03.477
+!MESSAGE Classpath changed for project: student
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-15 09:52:03.479
+!MESSAGE Boot project ADDED: student
