@@ -1,16 +1,4 @@
 INDEX VERSION 1.134+C:\development\spring boot\.metadata\.plugins\org.eclipse.jdt.core
-3078549918.index
-2109230988.index
-1306806701.index
-2623215956.index
-48944608.index
-2002975551.index
-13155418.index
-1928616890.index
-842018403.index
-1795465523.index
 1865797976.index
-3130493641.index
-255981515.index
-1604506120.index
-2440599495.index
+3078549918.index
+1306806701.index

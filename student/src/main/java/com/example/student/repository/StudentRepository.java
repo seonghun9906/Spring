@@ -14,7 +14,7 @@ public class StudentRepository {
 	private SqlSessionTemplate sql;
 	
 	public void save(StudentDTO studentDTO) {
-		sql.insert("Student.save",studentDTO);
+		sql.insert("Student.save", studentDTO);
 		
 	}
 
